@@ -19,4 +19,14 @@ public class Place {
 
     @ManyToOne //Many Place visited by One Employee, @ManyToOne -> used to connect two tables via a foreign key
     Employee employee;
+
+    //Table structure of "Place" Table: For "ManyToOne" relationship
+    /*
+    | Column Name       | Type                                       | Constraints                   | Description                              |
+    | ----------------- | ------------------------------------------ | ----------------------------- | ---------------------------------------- |
+    | `pin`             | INT                                        | PRIMARY KEY                   | Unique ID for the place (your own field) |
+    | `city`            | VARCHAR                                    | (default length, unless set)  | City name                                |
+    | `state`           | VARCHAR                                    | (default length, unless set)  | State name                               |
+    | `employee_emp_id` | INT (or BIGINT depending on Employee's PK) | FOREIGN KEY to `employee(id)` | Links each place to one employee         |
+    */
 }
